@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name simbolos_externos)(type Legacy)(uri ${KIPRJMOD}/simbolos_externos.lib)(options "")(descr ""))
+)
