@@ -253,17 +253,6 @@ F 3 "~" H 4500 1900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR01
-U 1 1 60091B34
-P 6000 1850
-F 0 "#PWR01" H 6000 1600 50  0001 C CNN
-F 1 "GND" H 6005 1677 50  0000 C CNN
-F 2 "" H 6000 1850 50  0001 C CNN
-F 3 "" H 6000 1850 50  0001 C CNN
-	1    6000 1850
-	-1   0    0    1   
-$EndComp
-$Comp
 L simbolos_externos:G3MB202PDC12 K1
 U 1 1 60094688
 P 6850 1200
@@ -340,41 +329,26 @@ $EndComp
 Wire Wire Line
 	5800 3000 5900 3000
 $Comp
-L simbolos_externos:HLK-PM01 U1
-U 1 1 60090467
-P 5400 1950
-F 0 "U1" H 5400 1950 50  0001 L BNN
-F 1 "HLK-PM01" H 5400 1950 50  0001 L BNN
-F 2 "Converter_ACDC:Converter_ACDC_HiLink_HLK-PMxx" H 5400 1950 50  0001 L BNN
-F 3 "" H 5400 1950 50  0001 L BNN
-	1    5400 1950
+L power:+5V #PWR02
+U 1 1 600925E2
+P 5700 1850
+F 0 "#PWR02" H 5700 1700 50  0001 C CNN
+F 1 "+5V" H 5715 2023 50  0000 C CNN
+F 2 "" H 5700 1850 50  0001 C CNN
+F 3 "" H 5700 1850 50  0001 C CNN
+	1    5700 1850
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR02
-U 1 1 600925E2
-P 6000 2050
-F 0 "#PWR02" H 6000 1900 50  0001 C CNN
-F 1 "+5V" H 6015 2223 50  0000 C CNN
-F 2 "" H 6000 2050 50  0001 C CNN
-F 3 "" H 6000 2050 50  0001 C CNN
-	1    6000 2050
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6000 2050 5900 2050
-Wire Wire Line
-	6000 1850 5900 1850
-$Comp
 L power:+5V #PWR07
 U 1 1 600AA64D
-P 6850 2000
-F 0 "#PWR07" H 6850 1850 50  0001 C CNN
-F 1 "+5V" H 6865 2173 50  0000 C CNN
-F 2 "" H 6850 2000 50  0001 C CNN
-F 3 "" H 6850 2000 50  0001 C CNN
-	1    6850 2000
-	-1   0    0    1   
+P 6500 800
+F 0 "#PWR07" H 6500 650 50  0001 C CNN
+F 1 "+5V" H 6515 973 50  0000 C CNN
+F 2 "" H 6500 800 50  0001 C CNN
+F 3 "" H 6500 800 50  0001 C CNN
+	1    6500 800 
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	7700 1850 7700 1650
@@ -402,12 +376,8 @@ Wire Wire Line
 	4350 1750 4350 1550
 Text Label 4350 1550 0    50   ~ 0
 CON_FUSE_REL_1
-Text Label 7500 1300 0    50   ~ 0
+Text Label 7300 800  0    50   ~ 0
 CON_FUSE_REL_1
-Wire Wire Line
-	7500 1700 7500 1300
-Wire Wire Line
-	7350 1700 7500 1700
 Wire Wire Line
 	3450 2050 3450 2150
 Connection ~ 3450 2050
@@ -656,30 +626,16 @@ $EndComp
 Connection ~ 7350 3650
 Wire Wire Line
 	7350 3650 7350 3550
-Wire Wire Line
-	7350 1650 7350 1700
-Wire Wire Line
-	6400 1650 6400 2200
 Text Label 6350 800  1    50   ~ 0
 RELAY_4
-Text Label 6500 800  1    50   ~ 0
-RELAY_3
 Text Label 7000 800  1    50   ~ 0
 RELAY_2
-Text Label 7300 800  1    50   ~ 0
-RELAY_1
-Text Label 6400 1650 2    50   ~ 0
+Text Label 6400 2100 2    50   ~ 0
 RELAY_4
 Text Label 7350 1850 2    50   ~ 0
 RELAY_2
-Text Label 7350 1650 2    50   ~ 0
-RELAY_1
 Wire Wire Line
 	7400 1850 7350 1850
-Text Label 6850 1850 2    50   ~ 0
-RELAY_3
-Wire Wire Line
-	6850 1850 6850 2000
 Wire Wire Line
 	7300 800  7300 875 
 Connection ~ 7300 875 
@@ -716,13 +672,37 @@ F 3 "~" H 8350 4550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6500 800  6500 875 
-Wire Wire Line
-	6500 875  6500 900 
-Connection ~ 6500 875 
-Wire Wire Line
 	6350 800  6350 875 
 Wire Wire Line
 	6350 875  6350 900 
 Connection ~ 6350 875 
+Wire Wire Line
+	6400 2200 6400 2100
+Wire Wire Line
+	6500 800  6500 875 
+Connection ~ 6500 875 
+Wire Wire Line
+	6500 875  6500 900 
+$Comp
+L Converter_ACDC:HLK-PM01 PS?
+U 1 1 6015542E
+P 5300 1950
+F 0 "PS?" H 5300 2275 50  0000 C CNN
+F 1 "HLK-PM01" H 5300 2184 50  0000 C CNN
+F 2 "Converter_ACDC:Converter_ACDC_HiLink_HLK-PMxx" H 5300 1650 50  0001 C CNN
+F 3 "http://www.hlktech.net/product_detail.php?ProId=54" H 5700 1600 50  0001 C CNN
+	1    5300 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 60091B34
+P 5700 2050
+F 0 "#PWR01" H 5700 1800 50  0001 C CNN
+F 1 "GND" H 5705 1877 50  0000 C CNN
+F 2 "" H 5700 2050 50  0001 C CNN
+F 3 "" H 5700 2050 50  0001 C CNN
+	1    5700 2050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
