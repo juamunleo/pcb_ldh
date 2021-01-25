@@ -266,16 +266,16 @@ $EndComp
 $Comp
 L simbolos_externos:G3MB202PDC12 K1
 U 1 1 60094688
-P 6850 1100
-F 0 "K1" H 6900 600 50  0000 R CNN
-F 1 "G3MB202PDC12" H 7150 700 50  0000 R CNN
-F 2 "footprints_externos:RELAY_G3MB202PDC12" H 6850 1100 50  0001 L BNN
-F 3 "" H 6850 1100 50  0001 L BNN
-F 4 "N/A" H 6850 1100 50  0001 L BNN "PARTREV"
-F 5 "Omron" H 6850 1100 50  0001 L BNN "MANUFACTURER"
-F 6 "Manufacturer Recommendation" H 6850 1100 50  0001 L BNN "STANDARD"
-	1    6850 1100
-	-1   0    0    1   
+P 6850 1200
+F 0 "K1" H 6850 1250 50  0000 R CNN
+F 1 "G3MB202PDC12" H 7150 1350 50  0000 R CNN
+F 2 "footprints_externos:RELAY_G3MB202PDC12" H 6850 1200 50  0001 L BNN
+F 3 "" H 6850 1200 50  0001 L BNN
+F 4 "N/A" H 6850 1200 50  0001 L BNN "PARTREV"
+F 5 "Omron" H 6850 1200 50  0001 L BNN "MANUFACTURER"
+F 6 "Manufacturer Recommendation" H 6850 1200 50  0001 L BNN "STANDARD"
+	1    6850 1200
+	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:Screw_Terminal_01x02 J2
@@ -368,16 +368,14 @@ Wire Wire Line
 $Comp
 L power:+5V #PWR07
 U 1 1 600AA64D
-P 6700 1800
-F 0 "#PWR07" H 6700 1650 50  0001 C CNN
-F 1 "+5V" H 6715 1973 50  0000 C CNN
-F 2 "" H 6700 1800 50  0001 C CNN
-F 3 "" H 6700 1800 50  0001 C CNN
-	1    6700 1800
-	-1   0    0    1   
+P 6500 800
+F 0 "#PWR07" H 6500 650 50  0001 C CNN
+F 1 "+5V" H 6515 973 50  0000 C CNN
+F 2 "" H 6500 800 50  0001 C CNN
+F 3 "" H 6500 800 50  0001 C CNN
+	1    6500 800 
+	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7200 1850 7400 1850
 Wire Wire Line
 	7700 1850 7700 1650
 Wire Wire Line
@@ -404,12 +402,8 @@ Wire Wire Line
 	4350 1750 4350 1550
 Text Label 4350 1550 0    50   ~ 0
 CON_FUSE_REL_1
-Text Label 7500 1300 0    50   ~ 0
+Text Label 7300 800  0    50   ~ 0
 CON_FUSE_REL_1
-Wire Wire Line
-	7500 1700 7500 1300
-Wire Wire Line
-	7350 1700 7500 1700
 Wire Wire Line
 	3450 2050 3450 2150
 Connection ~ 3450 2050
@@ -629,19 +623,6 @@ F 3 "" H 8350 4850 50  0001 C CNN
 	1    8350 4850
 	0    -1   -1   0   
 $EndComp
-$Comp
-L power:+3V3 #PWR014
-U 1 1 60109C1C
-P 8350 4550
-F 0 "#PWR014" H 8350 4400 50  0001 C CNN
-F 1 "+3V3" V 8365 4678 50  0000 L CNN
-F 2 "" H 8350 4550 50  0001 C CNN
-F 3 "" H 8350 4550 50  0001 C CNN
-	1    8350 4550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8300 4550 8350 4550
 Wire Wire Line
 	8300 4850 8350 4850
 NoConn ~ 7850 2650
@@ -671,6 +652,40 @@ $EndComp
 Connection ~ 7350 3650
 Wire Wire Line
 	7350 3650 7350 3550
+Text Label 6350 800  1    50   ~ 0
+RELAY_4
+Text Label 7000 800  1    50   ~ 0
+RELAY_2
+Text Label 6400 2100 2    50   ~ 0
+RELAY_4
+Text Label 7350 1850 2    50   ~ 0
+RELAY_2
+Wire Wire Line
+	7400 1850 7350 1850
+Wire Wire Line
+	7300 800  7300 875 
+Connection ~ 7300 875 
+Wire Wire Line
+	7300 875  7300 900 
+Wire Wire Line
+	7000 800  7000 875 
+Connection ~ 7000 875 
+Wire Wire Line
+	7000 875  7000 900 
+Connection ~ 8350 4550
+Wire Wire Line
+	8300 4550 8350 4550
+$Comp
+L power:+3V3 #PWR014
+U 1 1 60109C1C
+P 8350 4550
+F 0 "#PWR014" H 8350 4400 50  0001 C CNN
+F 1 "+3V3" V 8365 4678 50  0000 L CNN
+F 2 "" H 8350 4550 50  0001 C CNN
+F 3 "" H 8350 4550 50  0001 C CNN
+	1    8350 4550
+	0    1    1    0   
+$EndComp
 $Comp
 L power:PWR_FLAG #FLG0102
 U 1 1 601A1D5A
@@ -682,13 +697,16 @@ F 3 "~" H 8350 4550 50  0001 C CNN
 	1    8350 4550
 	0    1    1    0   
 $EndComp
-Connection ~ 8350 4550
 Wire Wire Line
-	6700 1650 6700 1800
+	6350 800  6350 875 
 Wire Wire Line
-	7200 1650 7200 1850
+	6350 875  6350 900 
+Connection ~ 6350 875 
 Wire Wire Line
-	7350 1650 7350 1700
+	6400 2200 6400 2100
 Wire Wire Line
-	6400 1650 6400 2200
+	6500 800  6500 875 
+Connection ~ 6500 875 
+Wire Wire Line
+	6500 875  6500 900 
 $EndSCHEMATC
