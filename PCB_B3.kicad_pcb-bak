@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 12)
+    (drawings 8)
     (tracks 87)
     (zones 0)
     (modules 18)
@@ -1069,10 +1069,6 @@
       (net 25 /A6))
   )
 
-  (gr_line (start 223.52 74.93) (end 223.52 133.35) (layer Edge.Cuts) (width 0.1))
-  (gr_line (start 129.54 74.93) (end 223.52 74.93) (layer Edge.Cuts) (width 0.1))
-  (gr_line (start 129.54 133.35) (end 129.54 74.93) (layer Edge.Cuts) (width 0.1))
-  (gr_line (start 223.52 133.35) (end 129.54 133.35) (layer Edge.Cuts) (width 0.1))
   (gr_text "Juan Manuel Muñoz" (at 198.12 124.46) (layer B.Cu)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
